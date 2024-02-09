@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "./static/css/main.css",
+    "main.js": "./static/js/main.js",
+    "static/js/888.chunk.js": "./static/js/888.chunk.js",
+    "static/js/787.chunk.js": "./static/js/787.chunk.js",
+    "static/js/948.chunk.js": "./static/js/948.chunk.js",
+    "static/media/scai.png": "./static/media/scai.c58b1907017f5136e5e5.png",
+    "static/media/polygon.png": "./static/media/polygon.fe8e582afa0dd0c4ea50.png",
+    "static/media/eth.png": "./static/media/eth.a85b6de0dc4a013ae2f8.png",
+    "static/media/metamask.png": "./static/media/metamask.02e3ec2750d2107176f5.png",
+    "static/media/bnb.png": "./static/media/bnb.92643887cb735977d3b9.png",
+    "static/media/walletConnectIcon.svg": "./static/media/walletConnectIcon.488dc369fbb265f431a7.svg",
+    "index.html": "./index.html",
+    "static/media/x.svg": "./static/media/x.3307687632e23d3e857283ab00b3ef3a.svg",
+    "main.css.map": "./static/css/main.css.map",
+    "main.js.map": "./static/js/main.js.map",
+    "787.chunk.js.map": "./static/js/787.chunk.js.map",
+    "948.chunk.js.map": "./static/js/948.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.css",
+    "static/js/main.js"
+  ]
+}
