@@ -364,7 +364,34 @@ const BuyTokenCard = (props) => {
       </s.Container>
       <s.TextID>Progress</s.TextID>
       <s.SpacerSmall />
-      <ProgressBar now={parseInt(idoInfo.progress)} />
+      <div className="card project-card"
+        style={{
+          padding: '0'
+        }}
+      >
+        <div className="card-body p-0">
+          <div className="item-progress">
+          
+            <div className="progress" style={{position: 'relative'}}>
+              <div className="progress-bar" style={{ width: parseInt(idoInfo.progress)+'%' }}>
+                { parseInt(idoInfo.progress) > 10 && (
+                  <span>{parseInt(idoInfo.progress)}{`%`}</span>
+                )}
+              </div>
+              {parseInt(idoInfo.progress) <= 10 && (
+                <span style={{
+                  position: 'absolute',
+                  left: '0px',
+                  right: '0px',
+                  textAlign: 'center',
+                  lineHeight: '1.8rem',
+                  color: '#FFF',
+                }}>{parseInt(idoInfo.progress)}{`%`}</span>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
       <s.SpacerMedium />
       {!hasEnded && isStarted && (
         <>
