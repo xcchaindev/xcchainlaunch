@@ -9,7 +9,7 @@ import "./openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 import "./IDOPool.sol";
 import "./IDOERC20Pool.sol";
 
-contract IDOFactory is Ownable {
+contract IDOFactoryV3 is Ownable {
     using SafeMath for uint256;
     using SafeERC20 for ERC20Burnable;
     using SafeERC20 for ERC20;
@@ -29,13 +29,9 @@ contract IDOFactory is Ownable {
     }
 
     address[] public idoPools;
-    mapping (address => bool) public idoPoolsMap;
-    function isIdoAddress(address _address) public view returns (bool) {
-        return idoPoolsMap[_address];
-    }
 
     function setIdoPools(address[] memory newIdoPools) external onlyOwner {
-    
+        idoPools = newIdoPools;
     }
     
     event IDOCreated(

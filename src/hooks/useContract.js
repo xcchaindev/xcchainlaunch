@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import Web3 from 'web3';
 import TokenLockerFactory from '../contracts/TokenLockerFactory.json';
 import Locker from "../contracts/TokenLocker.json";
-import IDOFactory from '../contracts/IDOFactoryV2.json';
+import IDOFactory from '../contracts/IDOFactoryV3.json';
 import IDOPool from "../contracts/IDOPool.json";
 import IDOERC20Pool from "../contracts/IDOERC20Pool.json";
 import STORAGE from '../contracts/Storage.json';

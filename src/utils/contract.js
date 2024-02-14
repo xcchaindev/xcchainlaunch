@@ -1,6 +1,6 @@
 import TokenLockerFactory from '../contracts/TokenLockerFactory.json';
 import IDOFactory from '../contracts/IDOFactory.json';
-import IDOFactoryV2 from '../contracts/IDOFactoryV2.json'
+import IDOFactoryV3 from '../contracts/IDOFactoryV3.json'
 import ERC20 from '../contracts/ERC20.json'
 import { getWeb3Library } from './getLibrary'
 import { networks } from '../constants/networksInfo'
@@ -47,7 +47,7 @@ export const callIDOFactoryContract = (options) => {
   } = options
 
   try {
-    const contract = getContractInstance(library.web3, address, IDOFactoryV2.abi)
+    const contract = getContractInstance(library.web3, address, IDOFactoryV3.abi)
     return new Promise(async (resolve, reject) => {
       contract.methods[method](...params)
         .send({ from: account })
@@ -93,7 +93,7 @@ export const fetchLockerFactoryInfo = (chainId, address) => {
 export const fetchIDOFactoryInfo = (chainId, address) => {
   return new Promise(async (resolve, reject) => {
     const web3 = getWeb3Library(networks[chainId].rpc)
-    const contract = getContractInstance(web3, address, IDOFactoryV2.abi)
+    const contract = getContractInstance(web3, address, IDOFactoryV3.abi)
     
     const owner = await contract.methods.owner().call()
     const onlyOwnerCreate = await contract.methods.onlyOwnerCreate().call()
@@ -160,7 +160,7 @@ const deployContract = async (params) => {
 }
 
 export const deployIDOFactory = async ({ library, onHash, FeeTokenAddress }) => {
-  const { abi, data: { bytecode: { object: bytecode } } } = IDOFactoryV2;
+  const { abi, data: { bytecode: { object: bytecode } } } = IDOFactoryV3;
 
   return deployContract({
     abi,
