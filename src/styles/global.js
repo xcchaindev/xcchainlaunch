@@ -136,7 +136,7 @@ export const Card = styled.div`
   flex-direction: ${({ fd }) => (fd ? fd : "column")};
   justify-content: ${({ jc }) => (jc ? jc : "flex-start")};
   align-items: ${({ ai }) => (ai ? ai : "flex-start")};
-  background-color: ${({ test }) => (test ? test : "var(--card)")};
+  background-color: ${({ test }) => (test ? test : "#16182D")};
   width: ${({ w }) => (w ? w : "100%")};
   background-image: ${({ image }) => (image ? `url(${image})` : "none")};
   background-size: cover;
@@ -149,6 +149,7 @@ export const Card = styled.div`
   min-width: ${({ mnw }) => (mnw ? mnw : "none")};
   min-height: ${({ mnh }) => (mnh ? mnh : "none")};
   flex-wrap: wrap;
+  color: #fff;
 `;
 
 export const UpperCard = styled.div`
@@ -260,7 +261,7 @@ export const TextDescriptionEllipsis = styled.p`
 export const TextID = styled.p`
   width: ${({ fullWidth }) => (fullWidth ? "100%" : "none")};
   text-align: center;
-  color: var(--secondary-color);
+  color: #9ca0d2;
   font-size: 16px;
   font-weight: 700;
 `;
@@ -338,7 +339,7 @@ export const Textarea = styled.textarea`
 
 export const button = styled.button`
   background-color: ${({ secondary }) => (secondary ? "inherit" : "var(--primary)")};
-  border: ${({ secondary }) => (secondary ? "var(--secondary-color)" : "var(--primary)")} 0.125em solid;
+  
   font-weight: 700;
   padding: 5px 20px;
   border-radius: 20px;
@@ -348,11 +349,37 @@ export const button = styled.button`
     fullWidth ? 'width: 100%;' : ''
   }
 
+  background: transparent none repeat scroll 0 0;
+  border-radius: 100px;
+  border: 2px solid #fff;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  ::after {
+    position: absolute;
+    content: "";
+    height: calc(100% + 4px);
+    width: calc(100% + 4px);
+    background-image: linear-gradient(135deg, var(--primary-color) 10%, var(--secondary-color));
+    top: -2px;
+    left: -2px;
+    border-radius: 100px;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    opacity: 0;
+    z-index: -1;
+  }
+  :hover::after {
+    opacity: 1;
+  }
+  :disabled::after {
+    display: none;
+  }
   :disabled {
     background-color: transparent;
     box-shadow: none;
-    color: var(--disable);
-    border: var(--disable) 0.125em solid;
+    color: #9ca0d2;
+    border: #9ca0d2 0.125em solid;
     text-shadow: none;
   }
   :hover {
