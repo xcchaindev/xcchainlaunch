@@ -127,7 +127,7 @@ return (
   }
   /* ------------------- */
   return (
-    <div className="col-12 col-sm-4 item filter-item-1 shuffle-item shuffle-item--visible">
+    <div className="col-12 col-sm-4 item filter-item-1 shuffle-item shuffle-item--visible" style={{padding: '0.5em'}}>
     
       <div className="card project-card">
         <div className="media">
