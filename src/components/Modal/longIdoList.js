@@ -14,12 +14,17 @@ const LongIdoList = () => {
   const { domainSettings: { isLockerEnabled } } = useApplicationContext();
 
   // sort IDOs by start time
-  userPoolAddresses.sort((a, b) => allPools[b]?.start - allPools[a]?.start);
-
+  userPoolAddresses.sort((a, b) => allPools[b]?.start - allPools[a]?.start)
+  const filteredPoolsHash = {}
+  const filteredPools = userPoolAddresses.filter((idoAddress) => {
+    if (!filteredPoolsHash[idoAddress]) {
+      filteredPoolsHash[idoAddress] = true
+      return true
+    }
+  })
   const loadmore = (amount) => {
     setLimit((p) => (p < userPoolAddresses.length ? p + amount : p));
   };
-
   return (
     <s.Container ai="center">
       <s.Container ai="center">
@@ -30,7 +35,7 @@ const LongIdoList = () => {
           jc="space-around"
           style={{ flexWrap: "wrap", marginTop: 20 }}
         >
-          {userPoolAddresses.map((poolAddress, index) => {
+          {filteredPools.map((poolAddress, index) => {
               if (index >= limit) {
                 return null;
               }
@@ -46,7 +51,7 @@ const LongIdoList = () => {
           jc="space-around"
           style={{ flexWrap: "wrap", marginTop: 20 }}
         >
-          {userPoolAddresses.map((poolAddress, index) => {
+          {filteredPools.map((poolAddress, index) => {
               if (index >= limit) {
                 return null;
               }
@@ -56,7 +61,7 @@ const LongIdoList = () => {
       }
       </s.Container>
       <s.SpacerSmall />
-      {limit >= userPoolAddresses.length ? null : (
+      {limit >= filteredPools.length ? null : (
         <s.button
           onClick={async (e) => {
             e.preventDefault();

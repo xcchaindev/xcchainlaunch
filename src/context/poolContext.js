@@ -49,7 +49,11 @@ export const PoolContextProvider = ({ children }) => {
             if (
               owner?.toLowerCase() === account?.toLowerCase()
               || (userData?.totalInvestedETH && userData?.totalInvestedETH !== "0")
-            ) setUserPoolAddresses((prevUserPoolAddresses) => [ ...prevUserPoolAddresses, idoAddress ])
+            ) {
+              if (userPoolAddresses.indexOf(idoAddress) == -1) {
+                setUserPoolAddresses((prevUserPoolAddresses) => [ ...prevUserPoolAddresses, idoAddress ])
+              }
+            }
           });
         });
       }, 500);
@@ -70,7 +74,11 @@ export const PoolContextProvider = ({ children }) => {
           if (
             owner?.toLowerCase() === account?.toLowerCase()
             || (userData?.totalInvestedETH && userData?.totalInvestedETH !== "0")
-          ) setUserPoolAddresses((prevUserPoolAddresses) => [ ...prevUserPoolAddresses, idoAddress ])
+          ) {
+            if (userPoolAddresses.indexOf(idoAddress) == -1) {
+              setUserPoolAddresses((prevUserPoolAddresses) => [ ...prevUserPoolAddresses, idoAddress ])
+            }
+          }
 
         });
       });

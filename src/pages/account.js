@@ -58,14 +58,7 @@ const Account = () => {
                 </s.TextTitle>
                 {canCreateIDO && (<CreateLaunchpad />)}
               </s.Container>
-              {canCreateIDO && (<LongIdoList />)}
-              {!canCreateIDO && (
-                <s.Container ai="center">
-                  <s.Text warning small>
-                    {`Creating new IDO Pools is not allowed for your account`}
-                  </s.Text>
-                </s.Container>
-              )}
+              <LongIdoList />
             </>
           ) : (
             <s.Container ai="center">
