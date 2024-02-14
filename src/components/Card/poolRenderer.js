@@ -154,8 +154,22 @@ return (
             </div>
           </div>
           <div className="item-progress">
-            <div className="progress">
-              <div className="progress-bar" style={{ width: progress+'%' }}>{progress}{`%`}</div>
+            <div className="progress" style={{position: 'relative'}}>
+              <div className="progress-bar" style={{ width: progress+'%' }}>
+                {progress > 10 && (
+                  <span>{progress}{`%`}</span>
+                )}
+              </div>
+              {progress <= 10 && (
+                <span style={{
+                  position: 'absolute',
+                  left: '0px',
+                  right: '0px',
+                  textAlign: 'center',
+                  lineHeight: '1.8rem',
+                  color: '#FFF',
+                }}>{progress}{`%`}</span>
+              )}
             </div>
             {/*
             <div className="progress-sale d-flex justify-content-between mt-3">
