@@ -77,7 +77,7 @@ const Navigation = () => {
   }
 
   return (
-    <Navbar collapseOnSelect expand="lg" variant="dark" style={{ padding: 15, background: '#121324' }}>
+    <Navbar collapseOnSelect expand="lg" variant="dark" style={{ padding: 15, marginBottom: 15, background: '#121324' }}>
       <Container style={{ maxWidth: "100%" }}>
         <s.LogoTitle src={logoUrl || mockCompanyLogo} />
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

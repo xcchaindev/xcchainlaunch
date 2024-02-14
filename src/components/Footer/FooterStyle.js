@@ -4,6 +4,7 @@ export const Box = styled.div`
   padding-top: 0;
   bottom: 0;
   width: 100%;
+  background: #121324;
 `;
    
 export const Container = styled.div`

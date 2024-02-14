@@ -54,14 +54,6 @@ const Footer = () => {
 
   return (
     <Box>
-      <hr
-        style={{
-          color: "#ffffff",
-          backgroundColor: "#ffffff",
-          height: 1,
-          borderColor: "#ffffff",
-        }}
-      />
       <Container style={{ padding: 30 }}>
         <Row fd="column" ai="center">
           <Heading>Contract Addresses</Heading>

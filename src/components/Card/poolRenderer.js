@@ -87,8 +87,45 @@ return (
       ).toNumber()
     ).toFormat(dp) + " " + payCurrency
   }
-  console.log('>>> metadata', metadata)
-  console.log('>>> idoInfo', idoInfo)
+  
+  /* Count down renderer */
+  const countDownRenderer = (opts) => {
+    const { days, hours, minutes, seconds, completed } = opts
+    if (completed) {
+      // Render a completed state
+      return (
+        <div className="countdown d-flex">
+          <span className="countdown-value days-bottom">{`...`}</span>
+        </div>
+      )
+    } else {
+      return (
+        <div className="countdown d-flex">
+          {(days > 0) && (
+            <div className="countdown-container days">
+              <span className="countdown-value days-bottom">{days}</span>
+              <span className="countdown-heading days-top">d</span>
+            </div>
+          )}
+          {(hours > 0) && (
+            <div className="countdown-container hours">
+            <span className="countdown-value hours-bottom">{hours}</span>
+              <span className="countdown-heading hours-top">h</span>
+            </div>
+          )}
+          <div className="countdown-container minutes">
+            <span className="countdown-value minutes-bottom">{minutes}</span>
+            <span className="countdown-heading minutes-top">m</span>
+          </div>
+          <div className="countdown-container seconds">
+            <span className="countdown-value seconds-bottom">{seconds}</span>
+            <span className="countdown-heading seconds-top">s</span>
+          </div>
+        </div>
+      )
+    }
+  }
+  /* ------------------- */
   return (
     <div className="col-12 col-sm-4 item filter-item-1 shuffle-item shuffle-item--visible">
     
@@ -117,25 +154,32 @@ return (
             <h4 className="m-0">{metadata.description}</h4>
             </NavLink>
             <div className="countdown-times">
-              <h6 className="my-2">Registration in:</h6>
-              <div className="countdown d-flex" data-date="2024-04-12">
-                <div className="countdown-container days">
-                  <span className="countdown-value days-bottom">59</span>
-                  <span className="countdown-heading days-top">d</span>
-                </div>
-                <div className="countdown-container hours">
-                  <span className="countdown-value hours-bottom">09</span>
-                  <span className="countdown-heading hours-top">h</span>
-                </div>
-                <div className="countdown-container minutes">
-                  <span className="countdown-value minutes-bottom">32</span>
-                  <span className="countdown-heading minutes-top">m</span>
-                </div>
-                <div className="countdown-container seconds">
-                  <span className="countdown-value seconds-bottom">49</span>
-                  <span className="countdown-heading seconds-top">s</span>
-                </div>
-              </div>
+              {hasEnded ? (
+                <Badge bg="secondary">Ended</Badge>
+              ) : isStarted ? (
+                <Badge bg="success">Started</Badge>
+              ) : (
+                <Badge bg="secondary">Not started</Badge>
+              )}
+              {
+                !hasEnded && (
+                  <>
+                    <h6 className="my-2">
+                      {isStarted
+                        ? "End in:"
+                        : "Start in:"}
+                    </h6>
+                    <Countdown
+                      renderer={countDownRenderer}
+                      date={
+                        isStarted
+                          ? parseInt(end) * 1000
+                          : parseInt(start) * 1000
+                      }
+                    />
+                  </>
+                )
+              }
             </div>
           </div>
         </div>
@@ -152,8 +196,16 @@ return (
               <span>&nbsp;</span>
               <span>{formatWei(hardCap)}</span>
             </div>
+            {/*
+            <div className="single-item">
+              <span>Hard cap:</span>
+              <span>&nbsp;</span>
+              <span>{formatWei(hardCap)}</span>
+            </div>
+            */}
           </div>
           <div className="item-progress">
+          
             <div className="progress" style={{position: 'relative'}}>
               <div className="progress-bar" style={{ width: progress+'%' }}>
                 {progress > 10 && (
