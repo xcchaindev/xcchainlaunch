@@ -1,0 +1,347 @@
+/*----------------------------------------------
+*
+* [Page Stylesheet]
+*
+* Theme    : Gameon - Metaverse IGO Launchpad WordPress Theme
+* Version  : 1.1
+* Author   : Themeland
+* Support  : hridoy1272@gmail.com
+* 
+----------------------------------------------*/
+
+/*----------------------------------------------
+
+[ALL CONTENTS]
+
+1. Root
+2. Page
+3. Keyframe
+3. All Media Queries
+
+----------------------------------------------*/
+
+/*----------------------------------------------
+1. Root
+----------------------------------------------*/
+
+/* #region Root */
+
+:root {
+	--primary-font: 'Gilroy', sans-serif;
+	--secondary-font: 'Poppins', sans-serif;
+
+	--h1-size: 6rem;
+	--h1-weight: 900;
+
+	--h2-size: 3rem;
+	--h2-weight: 700;
+
+	--p-size: 1rem;
+	--p-weight: 400;
+
+	--header-bg-color: #121324;
+	--nav-brand-height: 50px;
+	--nav-item-color: #f5f5f5;
+	--hero-bg-color: #121324;
+
+	--primary-color: #0047FF;
+	--secondary-color: #57048A;
+
+	--white-color: #f9f9f9;
+	--black-color: #040402;
+	--grey-color: #f3f5f7;
+	--dark-grey-color: #191919;
+
+	--primary-t-color: #F5F5F5;
+	--secondary-t-color: #2f323a;
+	--primary-p-color: #9CA0D2;
+	--secondary-p-color: #6f6f6f;
+	--primary-b-color: #f5f5f5;
+	--primary-l-color: rgba(255, 255, 255, 0.2);
+	--secondary-l-color: rgba(0, 0, 0, .12);
+
+	--valid-color: #007a4d;
+	--invalid-color: #e34f4f;
+
+	--primary-bg-color: #090A1A;
+	--primary-bg-color-2: #111111;
+	--primary-bg-color-3: #e5e5e5;
+
+	--secondary-bg-color: #f5f5f5;
+	--secondary-bg-color-2: #eeeeee;
+	--secondary-bg-color-3: #191919;
+
+	--card-bg-color: #16182D;
+	--card-bg-color-2: #fff;
+	--footer-bg-color: #121324;
+}
+
+/* #endregion Root */
+
+/*----------------------------------------------
+2. Page
+----------------------------------------------*/
+
+/* #region Page */
+
+/* Intro */
+
+.intro-span {
+	position: relative;
+	display: inline-block;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: var(--primary-color);
+}
+
+.intro-span::after {
+	position: absolute;
+	content: '';
+	height: 3px;
+	width: 40px;
+	background-color: var(--primary-color);
+	top: 50%;
+	left: calc(100% + 15px);
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+/* Hero */
+
+.hero-inner p {
+	font-size: 18px;
+}
+
+/* Contact Form */
+
+.contact-form {
+	padding: 3rem;
+	background-color: var(--card-bg-color);
+	border-radius: 1rem;
+}
+
+.contact-form ::-webkit-input-placeholder {
+	font-size: 1rem;
+}
+
+.contact-form :-ms-input-placeholder {
+	font-size: 1rem;
+}
+
+.contact-form ::placeholder {
+	font-size: 1rem;
+}
+
+.contact-form .form-group {
+	margin-bottom: 2rem;
+}
+
+.contact-form label {
+	margin-bottom: 0.5rem;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.contact-form label br {
+	display: none;
+}
+
+.contact-form .form-text {
+	display: inline-block;
+	margin-top: 0.5rem;
+    font-size: 0.9rem;
+	color: var(--primary-p-color);
+}
+
+.contact-form label .wpcf7-not-valid-tip {
+	font-size: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+	border-width: 2px;
+	border-radius: 2px;
+	border-style: inset;
+	border-color: var(--primary-p-color);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+	border-color: var(--primary-t-color);
+}
+
+.contact-form input[type="submit"] {
+	height: auto;
+	padding: 10px 20px;
+	background-color: var(--primary-color);
+	color: #fff;
+	font-weight: 500;
+}
+
+.contact-form .primary-button {
+    padding: 16px 34px;
+    color: var(--white-color) !important;
+    border-radius: 6px;
+    transition: background-image 0.3s ease-in-out 0s;
+}
+
+.contact-form p {
+	margin: 0;
+}
+
+.contact-form p:has(.wpcf7-spinner) {
+	display: flex;
+	align-items: center;
+}
+
+.contact-form .wpcf7-response-output {
+	margin: 0 !important;
+	margin-top: 1.5rem !important;
+}
+
+.contact-form .btn {
+	padding: 16px 26px;
+	border-radius: 6px;
+	font-weight: 500;
+}
+
+.contact-form .btn:hover,
+.contact-form .btn:focus {
+	background-color: var(--primary-color) !important;
+	color: var(--white-color) !important;
+}
+
+/* Counter */
+.counter-section .elementor-counter-number-wrapper {
+	display: inline-flex !important;
+}
+
+/* #endregion Page */
+
+/*----------------------------------------------
+3. Keyframe
+----------------------------------------------*/
+
+/* #region Keyframe */
+
+@-webkit-keyframes MoveScaleUpInitial {
+	to {
+		-webkit-transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+		transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+		opacity: 0;
+	}
+}
+
+@keyframes MoveScaleUpInitial {
+	to {
+		-webkit-transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+		transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes MoveScaleUpEnd {
+	from {
+		-webkit-transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+		transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+		opacity: 0;
+	}
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+@keyframes MoveScaleUpEnd {
+	from {
+		-webkit-transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+		transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+		opacity: 0;
+	}
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes MoveScaleLeftInitial {
+	to {
+		-webkit-transform: translate3d(100%, 0, 0) scale3d(2, 1, 1);
+		transform: translate3d(100%, 0, 0) scale3d(2, 1, 1);
+		opacity: 0;
+	}
+}
+
+@keyframes MoveScaleLeftInitial {
+	to {
+		-webkit-transform: translate3d(100%, 0, 0) scale3d(2, 1, 1);
+		transform: translate3d(100%, 0, 0) scale3d(2, 1, 1);
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes MoveScaleLeftEnd {
+	from {
+		-webkit-transform: translate3d(-100%, 0, 0) scale3d(2, 1, 1);
+		transform: translate3d(-100%, 0, 0) scale3d(2, 1, 1);
+		opacity: 0;
+	}
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+@keyframes MoveScaleLeftEnd {
+	from {
+		-webkit-transform: translate3d(-100%, 0, 0) scale3d(2, 1, 1);
+		transform: translate3d(-100%, 0, 0) scale3d(2, 1, 1);
+		opacity: 0;
+	}
+	to {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+		opacity: 1;
+	}
+}
+
+/* #endregion Keyframe */
+
+/*----------------------------------------------
+4. All Media Queries
+----------------------------------------------*/
+
+/* #region All Media Queries */
+
+@media (max-width: 575px) {
+
+	/* #region Page */
+
+	.hero-section {
+		background-attachment: scroll;
+	}
+
+	.contact-form {
+		padding: 2.5rem 2rem;
+	}
+
+	.contact-form .form-group {
+		margin-bottom: 1.5rem;
+	}
+
+	.contact-form label {
+		margin-bottom: 0.8rem;
+	}
+
+	.contact-form .wpcf7-response-output {
+		margin-top: 1.5rem !important;
+	}
+
+	/* #endregion Page */
+}
+
+/* #endregion All Media Queries */

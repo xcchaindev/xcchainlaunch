@@ -1,0 +1,199 @@
+/*----------------------------------------------
+*
+* [Default Stylesheet]
+*
+* Theme    : Gameon - Metaverse IGO Launchpad WordPress Theme
+* Version  : 1.1
+* Author   : Themeland
+* Support  : hridoy1272@gmail.com
+* 
+----------------------------------------------*/
+
+/*----------------------------------------------
+
+[ALL CONTENTS]
+
+1. Root
+2. Button
+
+----------------------------------------------*/
+
+/*----------------------------------------------
+1. Root
+----------------------------------------------*/
+
+/* #region Root */
+
+:root {
+	--primary-font: 'Gilroy', sans-serif;
+	--secondary-font: 'Poppins', sans-serif;
+
+	--h1-size: 6rem;
+	--h1-weight: 900;
+
+	--h2-size: 3rem;
+	--h2-weight: 700;
+
+	--p-size: 1rem;
+	--p-weight: 400;
+
+	--header-bg-color: #121324;
+	--nav-brand-height: 50px;
+	--nav-item-color: #f5f5f5;
+	--hero-bg-color: #121324;
+
+	--primary-color: #0047FF;
+	--secondary-color: #57048A;
+
+	--white-color: #f9f9f9;
+	--black-color: #040402;
+	--grey-color: #f3f5f7;
+	--dark-grey-color: #191919;
+
+	--primary-t-color: #F5F5F5;
+	--secondary-t-color: #2f323a;
+	--primary-p-color: #9CA0D2;
+	--secondary-p-color: #6f6f6f;
+	--primary-b-color: #f5f5f5;
+	--primary-l-color: rgba(255, 255, 255, 0.2);
+	--secondary-l-color: rgba(0, 0, 0, .12);
+
+	--valid-color: #007a4d;
+	--invalid-color: #e34f4f;
+
+	--primary-bg-color: #090A1A;
+	--primary-bg-color-2: #111111;
+	--primary-bg-color-3: #e5e5e5;
+
+	--secondary-bg-color: #f5f5f5;
+	--secondary-bg-color-2: #eeeeee;
+	--secondary-bg-color-3: #191919;
+
+	--card-bg-color: #16182D;
+	--card-bg-color-2: #fff;
+	--footer-bg-color: #121324;
+}
+
+/* #endregion Root */
+
+/*----------------------------------------------
+2. Button
+----------------------------------------------*/
+
+/* #region Button */
+
+.btn {
+	position: relative;
+	z-index: 1;
+	padding: 16px 34px;
+	border: 0 none;
+	border-radius: 0;
+	background: var(--primary-color);
+	color: var(--white-color);
+	font-size: 1rem;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	outline: 0 none;
+	cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+	-webkit-box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+	color: var(--white-color);
+}
+
+.btn-smaller {
+	padding: 12px 18px;
+	font-size: 0.9rem;
+}
+
+.btn:hover .btn-text {
+	-webkit-animation: MoveScaleUpInitial 0.25s forwards, MoveScaleUpEnd 0.25s forwards 0.25s;
+	animation: MoveScaleUpInitial 0.25s forwards, MoveScaleUpEnd 0.25s forwards 0.25s;
+}
+
+.content-btn {
+	padding: 0;
+	font-weight: 600;
+	color: var(--primary-t-color);
+	text-align: left;
+	line-height: 1.2;
+	background: transparent;
+	-webkit-box-shadow: none;
+			box-shadow: none;
+	padding-right: 15px;
+}
+
+@media (max-width: 575px) {
+	.content-btn {
+	margin-bottom: 5px;
+	}
+}
+
+.content-btn::before {
+	position: absolute;
+	content: '\f061';
+	font-family: 'Font Awesome 6 Free';
+	font-weight: 900;
+	top: 50%;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+	opacity: 0;
+	-webkit-transition: all 0.2s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+	transition: all 0.2s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+.content-btn::after {
+	position: absolute;
+	content: '\f061';
+	font-family: 'Font Awesome 6 Free';
+	font-weight: 900;
+	top: 50%;
+	right: -10px;
+	-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+	opacity: 1;
+	-webkit-transition: all 0.2s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+	transition: all 0.2s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+}
+
+.btn.content-btn:hover {
+	color: var(--primary-color);
+}
+
+.content-btn:hover::before {
+	right: -10px;
+	opacity: 1;
+}
+
+.content-btn:hover::after {
+	right: -20px;
+	opacity: 0;
+}
+
+.primary-button,
+.primary-button:visited,
+.primary-button:active {
+	position: relative;
+	z-index: 2;
+	padding: 10px 25px;
+	border-radius: 2px;
+	background-color: var(--primary-color);
+	color: var(--primary-b-color);
+	font-weight: 400;
+}
+
+.primary-button:hover,
+.primary-button:focus {
+	background-color: var(--primary-color);
+	background-image: -webkit-linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+	background-image: linear-gradient(45deg, var(--secondary-color) 15%, var(--primary-color) 65%);
+	color: var(--primary-b-color);
+}
+
+/* #endregion Button */

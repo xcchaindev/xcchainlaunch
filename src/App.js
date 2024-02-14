@@ -1,9 +1,9 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { Outlet, Route, Routes } from "react-router-dom";
 import { useWeb3React } from "@web3-react/core";
-import "./App.css";
+//import "./App.css";
 import Web3ReactManager from "./components/Web3ReactManager";
 import Connection from "./pages/Connection";
 import Footer from "./components/Footer/Footer";

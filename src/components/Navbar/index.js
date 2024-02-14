@@ -2,7 +2,7 @@ import BigNumber from "bignumber.js";
 import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
-import "../../App.css";
+//import "../../App.css";
 import { useApplicationContext } from "../../context/applicationContext";
 import styled from 'styled-components';
 import * as s from "../../styles/global";
@@ -77,7 +77,7 @@ const Navigation = () => {
   }
 
   return (
-    <Navbar collapseOnSelect expand="lg" variant="dark" style={{ margin: 15 }}>
+    <Navbar collapseOnSelect expand="lg" variant="dark" style={{ padding: 15, background: '#121324' }}>
       <Container style={{ maxWidth: "100%" }}>
         <s.LogoTitle src={logoUrl || mockCompanyLogo} />
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
