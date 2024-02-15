@@ -87,7 +87,8 @@ return (
       ).toNumber()
     ).toFormat(dp) + " " + payCurrency
   }
-  
+  const soldTokens = BigNumber(idoInfo.totalSupply).minus(idoInfo.unsold).toFixed()
+  console.log('>>> soldTokens', idoInfo.totalSupply, idoInfo.unsold, soldTokens)
   /* Count down renderer */
   const countDownRenderer = (opts) => {
     const { days, hours, minutes, seconds, completed } = opts
