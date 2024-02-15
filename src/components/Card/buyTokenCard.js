@@ -202,16 +202,18 @@ const BuyTokenCard = (props) => {
   const lessThanMinAmount = BigNumber(ethAmount).lt(BigNumber(idoInfo.min));
 
 
-  const formatWei = (weiValue, dp = 0) => {
-    return BigNumber(
+  const formatWei = (weiValue, dp = 18) => {
+    return Number(
       BigNumber(
-        (idoType === `ERC20`)
-          ? utils.tokenAmountFromWei(weiValue, payToken.decimals)
-          : library.web3.utils.fromWei(
-            weiValue
-          )
-      ).toNumber()
-    ).toFormat(dp)
+        BigNumber(
+          (idoType === `ERC20`)
+            ? utils.tokenAmountFromWei(weiValue, payToken.decimals)
+            : library.web3.utils.fromWei(
+              weiValue
+            )
+        ).toNumber()
+      ).toFormat(dp)
+    )
   }
 
   const buyTokenAmountInput = (
@@ -280,6 +282,7 @@ const BuyTokenCard = (props) => {
   if (idoInfo.allowRefund === false) {
     if (hasEnded && BigNumber(idoInfo.userData.debt).gt(0)) claimDisabled = false
   }
+  
   return (
     <s.Card
       style={{
@@ -364,7 +367,7 @@ const BuyTokenCard = (props) => {
       </s.Container>
       <s.TextID>Progress</s.TextID>
       <s.SpacerSmall />
-      <div className="card project-card"
+      <div className="card project-card no-hover"
         style={{
           padding: '0'
         }}

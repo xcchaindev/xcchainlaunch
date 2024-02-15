@@ -161,6 +161,44 @@ const WithdrawETH = (props) => {
       </>
     )
   }
+  /* Count down renderer */
+  const countDownRenderer = (opts) => {
+    const { days, hours, minutes, seconds, completed } = opts
+    if (completed) {
+      // Render a completed state
+      return (
+        <div className="countdown d-flex">
+          <span className="countdown-value days-bottom">{`...`}</span>
+        </div>
+      )
+    } else {
+      return (
+        <div className="countdown d-flex">
+          {(days > 0) && (
+            <div className="countdown-container days">
+              <span className="countdown-value days-bottom">{days}</span>
+              <span className="countdown-heading days-top">d</span>
+            </div>
+          )}
+          {(hours > 0) && (
+            <div className="countdown-container hours">
+            <span className="countdown-value hours-bottom">{hours}</span>
+              <span className="countdown-heading hours-top">h</span>
+            </div>
+          )}
+          <div className="countdown-container minutes">
+            <span className="countdown-value minutes-bottom">{minutes}</span>
+            <span className="countdown-heading minutes-top">m</span>
+          </div>
+          <div className="countdown-container seconds">
+            <span className="countdown-value seconds-bottom">{seconds}</span>
+            <span className="countdown-heading seconds-top">s</span>
+          </div>
+        </div>
+      )
+    }
+  }
+  /* ------------------- */
   return (
     <s.Card
       style={{
@@ -179,7 +217,7 @@ const WithdrawETH = (props) => {
               <s.TextID>Can withdraw in</s.TextID>
             </s.Container>
 
-            <Countdown date={idoInfo.end * 1000} />
+            <Countdown renderer={countDownRenderer} date={idoInfo.end * 1000} />
           </s.Container>
         )
       }

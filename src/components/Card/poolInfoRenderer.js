@@ -45,14 +45,16 @@ const PoolInfoRenderer = (props) => {
 
   const payCurrency = (idoType === `ERC20`) ? payToken.symbol : baseCurrencySymbol
 
-  const formatWei = (weiValue, dp = 0) => {
-    return BigNumber(
+  const formatWei = (weiValue, dp = 18) => {
+    return Number(
       BigNumber(
-        (idoType === `ERC20`)
-          ? utils.tokenAmountFromWei(weiValue, payToken.decimals)
-          : Web3Utils.fromWei(weiValue, "ether")
-      ).toNumber()
-    ).toFormat(dp) + " " + payCurrency
+        BigNumber(
+          (idoType === `ERC20`)
+            ? utils.tokenAmountFromWei(weiValue, payToken.decimals)
+            : Web3Utils.fromWei(weiValue, "ether")
+        ).toNumber()
+      ).toFormat(dp)
+    ) + " " + payCurrency
   }
 
   return (

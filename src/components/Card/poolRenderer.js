@@ -78,14 +78,16 @@ return (
   if (!idoAddress || !metadata || !tokenName || !tokenSymbol) return null;
   
   const payCurrency = (idoType === `ERC20`) ? idoInfo.payToken.symbol : baseCurrencySymbol
-  const formatWei = (weiValue, dp = 0) => {
-    return BigNumber(
+  const formatWei = (weiValue, dp = 18) => {
+    return Number(
       BigNumber(
-        (idoType === `ERC20`)
-          ? utils.tokenAmountFromWei(weiValue, payToken.decimals)
-          : Web3Utils.fromWei(weiValue, "ether")
-      ).toNumber()
-    ).toFormat(dp) + " " + payCurrency
+        BigNumber(
+          (idoType === `ERC20`)
+            ? utils.tokenAmountFromWei(weiValue, payToken.decimals)
+            : Web3Utils.fromWei(weiValue, "ether")
+        ).toNumber()
+      ).toFormat(dp)
+    ) + " " + payCurrency
   }
   const soldTokens = BigNumber(idoInfo.totalSupply).minus(idoInfo.unsold).toFixed()
   console.log('>>> soldTokens', idoInfo.totalSupply, idoInfo.unsold, soldTokens)
