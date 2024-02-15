@@ -118,6 +118,7 @@ export const PoolContextProvider = ({ children }) => {
       // Old contract version
     })
 
+    /*
     contract.web3.eth.getBlockNumber().then((startBlock) => {
       setIDOCreatedEvent(
         contract.IDOFactory.events.IDOCreated(
@@ -132,6 +133,7 @@ export const PoolContextProvider = ({ children }) => {
         )
       );
     })
+    */
   }, [dispatch, contract]);
 
   useEffect(() => {

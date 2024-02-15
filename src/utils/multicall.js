@@ -246,6 +246,7 @@ export const loadPoolInfoByMC = ({
           let poolData = {
             ...mcAnswer,
             ...tokensInfo,
+            chainId,
             idoType: (mcAnswer.poolType == "2") ? 'ERC20' : 'NATIVE',
             idoAddress,
             tokenRate: tokenPrice,

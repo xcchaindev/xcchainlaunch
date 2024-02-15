@@ -14,6 +14,7 @@ import { utils } from "../../utils";
 import * as Web3Utils from "web3-utils";
 import imageSolid from "../../assets/images/image-solid.png"
 import { useApplicationContext } from "../../context/applicationContext";
+import { CURRENCY } from '../../assets/images/'
 
 const PoolRenderer = (props) => {
   const contract = useSelector((state) => state.contract);
@@ -280,9 +281,7 @@ return (
         </div>
         
         <div className="blockchain-icon">
-        {/*
-          <img decoding="async" src="./design/ethereum.png" alt="" />
-        */}
+          <img decoding="async" src={CURRENCY[idoInfo.chainId]} alt="" style={{ maxWidth: '32px' }} />
         </div>
       </div>
       
