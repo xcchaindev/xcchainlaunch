@@ -89,8 +89,10 @@ return (
       ).toFormat(dp)
     ) + " " + payCurrency
   }
-  const soldTokens = BigNumber(idoInfo.totalSupply).minus(idoInfo.unsold).toFixed()
-  console.log('>>> soldTokens', idoInfo.totalSupply, idoInfo.unsold, soldTokens)
+  
+  // hardCap / tokenRate
+  const totalTokens = BigNumber(idoInfo.finInfo.hardCap).div(idoInfo.finInfo.tokenPrice)
+  const soldTokens = totalTokens.minus(utils.tokenAmountFromWei(idoInfo.unsold, idoInfo.tokenDecimals))
   /* Count down renderer */
   const countDownRenderer = (opts) => {
     const { days, hours, minutes, seconds, completed } = opts
@@ -226,12 +228,10 @@ return (
                 }}>{progress}{`%`}</span>
               )}
             </div>
-            {/*
             <div className="progress-sale d-flex justify-content-between mt-3">
-              <span>0/100,069 MECHA</span>
-              <span>0 BUSD</span>
+              <span>{soldTokens.toNumber()}{`/`}{totalTokens.toNumber()}{` `}{idoInfo.tokenSymbol}</span>
+              <span>{formatWei((idoInfo.idoType == 'NATIVE') ? idoInfo.totalInvestedETH : idoInfo.totalInvestedERC)}</span>
             </div>
-            */}
           </div>
         </div>
         
