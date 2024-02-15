@@ -204,7 +204,7 @@ const Navigation = () => {
       {switchNetworkOpened && (
         <SwitchNetworkWrapper>
           <SwitchNetworkModal>
-            <SwitchNetwork aviableChainIds={configuredNetworks} />
+            <SwitchNetwork aviableChainIds={configuredNetworks} onTrySwitch={() => { closeSwitchChain() }} />
             <SwitchNetworkClose>
               <s.button onClick={() => { closeSwitchChain() }}>Cancel</s.button>
             </SwitchNetworkClose>

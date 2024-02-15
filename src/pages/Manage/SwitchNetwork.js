@@ -35,14 +35,18 @@ const Holder = styled.div`
 
 export default function SwitchNetwork(props) {
   const {
-    aviableChainIds
+    aviableChainIds,
+    onSwitch,
+    onTrySwitch,
   } = props
 
   const { connector } = useWeb3React()
 
   const trySwitch = async (chainId) => {
+    if (onTrySwitch) onTrySwitch()
     if (connector instanceof InjectedConnector) {
       const result = await switchInjectedNetwork(chainId)
+      if (onSwitch) onSwitch(result)
     }
   }
 
