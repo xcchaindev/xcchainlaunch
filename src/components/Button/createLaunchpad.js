@@ -1,5 +1,6 @@
 import { useWeb3React } from "@web3-react/core";
 import { NavLink } from "react-router-dom";
+import * as s from "../../styles/global"
 
 const CreateLaunchpad = () => {
   const { library } = useWeb3React();
@@ -14,22 +15,19 @@ const CreateLaunchpad = () => {
       }}
     >
       {library ? (
-        <NavLink
-          to="/publish"
+        <s.button
+          href="#/publish"
           style={{
             whiteSpace: "nowrap",
-            backgroundColor: "var(--primary)",
             padding: 10,
-            borderRadius: 20,
             fontWeight: 700,
             paddingLeft: 30,
             paddingRight: 30,
             textDecoration: "none",
-            color: "var(--card)",
           }}
         >
-          Create IDO Pool
-        </NavLink>
+          Create New IDO Pool
+        </s.button>
       ) : null}
     </div>
   );

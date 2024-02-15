@@ -54,7 +54,7 @@ const Account = () => {
             <>
               <s.Container fd="row" ai="center" jc="space-between">
                 <s.TextTitle style={{ flex: 1, whiteSpace: "nowrap", margin: 20 }}>
-                  My IDO
+                  My IDO's
                 </s.TextTitle>
                 {canCreateIDO && (<CreateLaunchpad />)}
               </s.Container>
