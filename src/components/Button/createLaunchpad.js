@@ -16,7 +16,7 @@ const CreateLaunchpad = () => {
     >
       {library ? (
         <s.button
-          href="#/publish"
+          onClick={(e) => { window.location.href="#/publish" }}
           style={{
             whiteSpace: "nowrap",
             padding: 10,

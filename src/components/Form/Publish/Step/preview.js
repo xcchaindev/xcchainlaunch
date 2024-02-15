@@ -369,21 +369,21 @@ export default function Preview() {
       <s.Container fd={"row"} jc="space-between">
         <s.Container flex={1} style={{ marginLeft: 10, marginRight: 10 }}>
           <s.TextID>{`Soft Cap`}</s.TextID>
-          <s.TextDescription>{`${BigNumber(softCap).toFormat(2)} ${payCurrency}`}</s.TextDescription>
+          <s.TextDescription>{`${Number(BigNumber(softCap).toFormat(18))} ${payCurrency}`}</s.TextDescription>
           <s.SpacerSmall />
           <s.TextID>{`Hard Cap`}</s.TextID>
-          <s.TextDescription>{`${hardCapBN.toFormat(2)} ${payCurrency}`}</s.TextDescription>
+          <s.TextDescription>{`${Number(hardCapBN.toFormat(18))} ${payCurrency}`}</s.TextDescription>
           <s.SpacerSmall />
         </s.Container>
         <s.Container flex={1} style={{ marginLeft: 10, marginRight: 10 }}>
           <s.TextID>{`Minimum Buy`}</s.TextID>
           <s.TextDescription>
-            {`${BigNumber(minETH).toFormat(2)} ${payCurrency}`}
+            {`${Number(BigNumber(minETH).toFormat(18))} ${payCurrency}`}
           </s.TextDescription>
           <s.SpacerSmall />
           <s.TextID>{`Maximum Buy`}</s.TextID>
           <s.TextDescription>
-            {`${BigNumber(maxETH).toFormat(2)} ${payCurrency}`}
+            {`${Number(BigNumber(maxETH).toFormat(18))} ${payCurrency}`}
           </s.TextDescription>
           {
             isAddLiquidityEnabled && <>
