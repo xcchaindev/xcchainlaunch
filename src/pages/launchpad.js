@@ -22,7 +22,7 @@ const Launchpad = (props) => {
   }
 
   return (
-    <s.Container ai="center" bgcolor="#090a1a">
+    <s.Container ai="center" bgcolor="#090a1a" style={{ paddingLeft: '10em', paddingRight: '10em', paddingTop: '2em' }}>
       <s.TextTitle>Launchpad</s.TextTitle>
       <s.SpacerMedium />
       <TextField

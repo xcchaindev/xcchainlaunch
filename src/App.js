@@ -11,6 +11,7 @@ import Navigation from "./components/Navbar";
 import Account from "./pages/account";
 import Home from "./pages/home.js";
 import Launchpad from "./pages/launchpad.js";
+import LaunchpadNew from "./pages/launchpadnew.js";
 import LaunchpadInfo from "./pages/launchpadInfo";
 import Locker from "./pages/locker";
 import LockerInfo from "./pages/lockerInfo";
@@ -68,16 +69,18 @@ function App() {
               <>
                 <Navigation />
                 <s.Container ai="center">
-                  <s.Container w="85%" style={{ minHeight: 600 }}>
+                  <s.Container w="85%" style={{ minHeight: 600, width: '100%', marginTop: '-1em' }}>
 
                     <Outlet />
                     <Routes>
-                      <Route path="/" element={<Launchpad />} />
+                      <Route path="/" element={<LaunchpadNew />} />
                       <Route path="/launchpad" element={<Launchpad />} />
+                      {/*
                       <Route
                         path="/home"
                         element={<Home />}
                       />
+                        */}
                       <Route path="/manage" element={<Manage />} />
                       <Route path="/launchpad/:idoAddress" element={<LaunchpadInfo />} />
                       <Route path="/publish" element={<Publish />} />

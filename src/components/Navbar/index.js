@@ -117,15 +117,15 @@ const Navigation = () => {
     <>
       <Navbar collapseOnSelect expand="lg" variant="dark" style={{ padding: 15, marginBottom: 15, background: '#121324' }}>
         <Container style={{ maxWidth: "100%" }}>
-          <s.LogoTitle src={logoUrl || mockCompanyLogo} />
+          <a href="/#">
+            <s.LogoTitle src={logoUrl || mockCompanyLogo} />
+          </a>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              {/*
-              <LinkContainer to="/home">
+              <LinkContainer to="/">
                 <Nav.Link>Home</Nav.Link>
               </LinkContainer>
-              */}
               <LinkContainer to="/launchpad">
                 <Nav.Link>Launchpad</Nav.Link>
               </LinkContainer>
