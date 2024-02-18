@@ -209,6 +209,98 @@ const LaunchpadNew = (props) => {
           </div>
         </div>
       </div>
+      {/* How it work */}
+      <div class="elementor-33" style={{ width: '100%' }}>
+        <div class="elementor-element elementor-element-74742b5d e-flex e-con-boxed e-con e-parent" data-id="74742b5d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
+          <div class="e-con-inner">
+            <div class="elementor-element elementor-element-24eb401d e-flex e-con-boxed e-con e-child" data-id="24eb401d" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+              <div class="e-con-inner">
+                <div class="elementor-element elementor-element-2ac98bb7 e-flex e-con-boxed e-con e-child" data-id="2ac98bb7" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+                  <div class="e-con-inner">
+                    <div class="elementor-element elementor-element-35ceed76 intro elementor-widget elementor-widget-heading" data-id="35ceed76" data-element_type="widget" data-widget_type="heading.default">
+                      <div class="elementor-widget-container">
+                        <span class="elementor-heading-title elementor-size-default">How It Works</span>
+                      </div>
+                    </div>
+                    <div class="elementor-element elementor-element-7efac584 elementor-widget elementor-widget-heading" data-id="7efac584" data-element_type="widget" data-widget_type="heading.default">
+                      <div class="elementor-widget-container">
+                        <h3 class="elementor-heading-title elementor-size-default">How To Participate</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="elementor-element elementor-element-627591cf e-flex e-con-boxed e-con e-child" data-id="627591cf" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+              <div class="e-con-inner">
+                <div class="elementor-element elementor-element-64c201d7 e-flex e-con-boxed e-con e-child" data-id="64c201d7" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+                  <div class="e-con-inner">
+                    <div class="elementor-element elementor-element-32a4d02 elementor-widget elementor-widget-styled-icon" data-id="32a4d02" data-element_type="widget" data-widget_type="styled-icon.default">
+                      <div class="elementor-widget-container">
+                        <div class="icon-wrapper">
+                          <i class="icons icon-drawer"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="elementor-element elementor-element-52fd5851 elementor-widget elementor-widget-heading" data-id="52fd5851" data-element_type="widget" data-widget_type="heading.default">
+                      <div class="elementor-widget-container">
+                        <h4 class="elementor-heading-title elementor-size-default">Submit KYC</h4>
+                      </div>
+                    </div>
+                    <div class="elementor-element elementor-element-5a9d4bf0 elementor-widget elementor-widget-heading" data-id="5a9d4bf0" data-element_type="widget" data-widget_type="heading.default">
+                      <div class="elementor-widget-container">
+                        <p class="elementor-heading-title elementor-size-default">Ensure a secure and compliant experience by submitting your Know Your Customer (KYC) details. Safeguard your identity and contribute to a trustworthy ecosystem.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="elementor-element elementor-element-1b6b8cfe e-flex e-con-boxed e-con e-child" data-id="1b6b8cfe" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+                  <div class="e-con-inner">
+                    <div class="elementor-element elementor-element-708b5347 elementor-widget elementor-widget-styled-icon" data-id="708b5347" data-element_type="widget" data-widget_type="styled-icon.default">
+                      <div class="elementor-widget-container">
+                        <div class="icon-wrapper">
+                          <i class="icons icon-wallet"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="elementor-element elementor-element-4d27c783 elementor-widget elementor-widget-heading" data-id="4d27c783" data-element_type="widget" data-widget_type="heading.default">
+                      <div class="elementor-widget-container">
+                        <h4 class="elementor-heading-title elementor-size-default">Verify Wallet</h4>
+                      </div>
+                    </div>
+                    <div class="elementor-element elementor-element-5e252769 elementor-widget elementor-widget-heading" data-id="5e252769" data-element_type="widget" data-widget_type="heading.default">
+                      <div class="elementor-widget-container">
+                        <p class="elementor-heading-title elementor-size-default">Effortlessly connect your crypto wallet to our platform. Verification is quick and easy, providing you with a seamless entry into the world of blockchain gaming.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="elementor-element elementor-element-6bf6e3a4 e-flex e-con-boxed e-con e-child" data-id="6bf6e3a4" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}">
+                  <div class="e-con-inner">
+                    <div class="elementor-element elementor-element-42d07ba5 elementor-widget elementor-widget-styled-icon" data-id="42d07ba5" data-element_type="widget" data-widget_type="styled-icon.default">
+                      <div class="elementor-widget-container">
+                        <div class="icon-wrapper">
+                          <i class="icons icon-fire"></i>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="elementor-element elementor-element-f2b5e0b elementor-widget elementor-widget-heading" data-id="f2b5e0b" data-element_type="widget" data-widget_type="heading.default">
+                      <div class="elementor-widget-container">
+                        <h4 class="elementor-heading-title elementor-size-default">Start Staking</h4>
+                      </div>
+                    </div>
+                    <div class="elementor-element elementor-element-531bbe3e elementor-widget elementor-widget-heading" data-id="531bbe3e" data-element_type="widget" data-widget_type="heading.default">
+                      <div class="elementor-widget-container">
+                        <p class="elementor-heading-title elementor-size-default">Dive into the rewarding world of staking by supporting your preferred game projects. Begin your journey by staking your assets and watch your rewards grow.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       {/* Apply IDO */}
       <div class="elementor-33" style={{ width: '100%' }}>
         <div class="elementor-element elementor-element-7a9cf532 e-flex e-con-boxed e-con e-parent" data-id="7a9cf532" data-element_type="container" data-settings="{&quot;content_width&quot;:&quot;boxed&quot;}" data-core-v316-plus="true">
