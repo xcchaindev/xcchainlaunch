@@ -30,7 +30,7 @@ const LaunchpadNew = (props) => {
           <div class="e-con-inner">
             <div class="elementor-element elementor-element-12754ec3 elementor-widget elementor-widget-heading" data-id="12754ec3" data-element_type="widget" data-widget_type="heading.default">
               <div class="elementor-widget-container">
-                <h1 class="elementor-heading-title elementor-size-default">Then NEXT Generation Web3.0 Launchpad</h1>
+                <h1 class="elementor-heading-title elementor-size-default">NEXT Generation Web3.0 Launchpad</h1>
               </div>
             </div>
             <div class="elementor-element elementor-element-5ea1a561 elementor-widget elementor-widget-heading" data-id="5ea1a561" data-element_type="widget" data-widget_type="heading.default">

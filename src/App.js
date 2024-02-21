@@ -91,7 +91,7 @@ function App() {
                     </Routes>
                     <s.SpacerLarge />
                   </s.Container>
-                  <Footer />
+                  {/*<Footer />*/}
                 </s.Container>
               </>
             )
