@@ -22,20 +22,24 @@ const Launchpad = (props) => {
   }
 
   return (
-    <s.Container ai="center" bgcolor="#090a1a" style={{ paddingLeft: '10em', paddingRight: '10em', paddingTop: '2em' }}>
-      <s.TextTitle>Launchpad</s.TextTitle>
-      <s.SpacerMedium />
-      <TextField
-        fullWidth
-        label={"Search by token address "}
-        onChange={async (e) => {
-          e.preventDefault();
-          await utils.typewatch(2000);
-          setAddress(e.target.value);
-        }}
-      />
-      <IDOList tokenAddress={address} />
-    </s.Container>
+    <>
+      <s.Container ai="center" bgcolor="#090a1a" style={{ paddingLeft: '2em', paddingRight: '2em', paddingTop: '2em' }}>
+        <s.TextTitle>Launchpads</s.TextTitle>
+        <s.SpacerMedium />
+        <TextField
+          fullWidth
+          label={"Search by token address "}
+          onChange={async (e) => {
+            e.preventDefault();
+            await utils.typewatch(2000);
+            setAddress(e.target.value);
+          }}
+        />
+      </s.Container>
+      <s.Container ai="center" bgcolor="#090a1a" style={{ paddingTop: '2em' }}>
+        <IDOList tokenAddress={address} />
+      </s.Container>
+    </>
   );
 };
 

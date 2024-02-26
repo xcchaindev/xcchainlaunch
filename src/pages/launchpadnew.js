@@ -63,7 +63,7 @@ const LaunchpadNew = (props) => {
           </div>
         </div>
       </div>
-      <s.Container ai="center" bgcolor="#090a1a" style={{ paddingLeft: '5em', paddingRight: '5em' }}>
+      <s.Container ai="center" bgcolor="#090a1a">
         <s.SpacerMedium />
         {/*
         <TextField
